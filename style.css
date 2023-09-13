@@ -106,6 +106,7 @@ html {
 .mains .left-container>div .tops .right-tops {
     width: 60px;
     background-color: rgb(252, 245, 229);
+    color: rgb(157, 119, 52);
     height: auto;
     display: flex;
     justify-content: center;
@@ -169,7 +170,7 @@ html {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
     .mains {
         flex-wrap: wrap;
     }
