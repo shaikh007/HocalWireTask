@@ -143,7 +143,7 @@ html {
     font-weight: 600;
 }
 
-@media (max-width: 850px) {
+@media only screen and (max-width: 850px) {
     .mains {
         flex-wrap: wrap;
     }
@@ -161,6 +161,35 @@ html {
     .mains .left-container {
         width: 100%;
         margin-right: 0;
+    }
+    .mains .left-container>div .tops {
+        margin-bottom: 6px;
+    }
+    .mains .left-container>div .centers {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .mains {
+        flex-wrap: wrap;
+    }
+    .mains .right-container {
+        height: 231px;
+    }
+    .mains .right-container .overlays {
+        height: 227px;
+    }
+    .mains .right-container .overlays div {
+        margin-right: 10px;
+    }
+    .mains .left-container {
+        width: 100%;
+        margin-right: 0;
+    }
+    .mains .left-container>div {
+        width: 100%;
+        margin: 10px;
     }
     .mains .left-container>div .tops {
         margin-bottom: 6px;
