@@ -19,32 +19,39 @@ html {
 }
 
 .mains .right-container {
-    background-image: url('gautamgambhir.jpg');
-    background-repeat: no-repeat;
     width: 50%;
-    height: 371px;
     margin: 10px 30px 10px 10px;
     background-size: cover;
     color: white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.mains .right-container .overlays {
-    background-image: linear-gradient(to bottom, rgba(98, 98, 98, 0.52), rgba(0, 0, 0, 0.872));
+.mains .right-container .image {
     width: 100%;
-    height: 371px;
+    position: relative;
+}
+
+.mains .right-container .image img {
+    width: 100%;
+}
+
+.mains .right-container .image .overlays {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(98, 98, 98, 0.52), rgba(0, 0, 0, 0.872));
     background-size: cover;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: relative;
+    position: absolute;
+    top: 0;
     border-radius: 15px;
     padding-bottom: 20px;
 }
 
-.mains .right-container .overlays .share-btn {
+.mains .right-container .image .overlays .share-btn {
     position: absolute;
     top: 3%;
     right: 3%;
@@ -54,13 +61,13 @@ html {
     padding: 2px;
 }
 
-.mains .right-container .overlays div {
+.mains .right-container .image .overlays div {
     margin-bottom: 10px;
     margin-left: 20px;
     font-weight: 600;
 }
 
-.mains .right-container .overlays .sports-tag {
+.mains .right-container .image .overlays .sports-tag {
     background-color: grey;
     width: 60px;
     display: flex;
@@ -69,7 +76,7 @@ html {
     border-radius: 5px;
 }
 
-.mains .right-container .overlays .Author {
+.mains .right-container .image .overlays .Author {
     font-weight: 200;
     color: gray;
 }
@@ -143,17 +150,13 @@ html {
     font-weight: 600;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
     .mains {
         flex-wrap: wrap;
     }
     .mains .right-container {
         width: 100%;
         margin: 10px 10px 10px 10px;
-        height: 500px;
-    }
-    .mains .right-container .overlays {
-        height: 505px;
     }
     .mains .right-container .overlays div {
         margin-right: 10px;
@@ -174,12 +177,6 @@ html {
     .mains {
         flex-wrap: wrap;
     }
-    .mains .right-container {
-        height: 231px;
-    }
-    .mains .right-container .overlays {
-        height: 227px;
-    }
     .mains .right-container .overlays div {
         margin-right: 10px;
     }
@@ -196,5 +193,22 @@ html {
     }
     .mains .left-container>div .centers {
         font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .mains .right-container .image .overlays .sports-tag,
+    .mains .right-container .image .overlays .gautam-words,
+    .mains .right-container .image .overlays .Author {
+        margin-left: 5px;
+    }
+    .mains .right-container .image .overlays .gautam-words h3 {
+        font-size: 13px;
+        margin: -5px 0;
+    }
+    .mains .right-container .image .overlays .sports-tag {
+        width: 50px;
+        border-radius: 5px;
+        background-color: #707070;
     }
 }
